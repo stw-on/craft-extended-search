@@ -1,7 +1,8 @@
 # Expanded Search plugin for Craft CMS 3.x
 
-Ported https://github.com/composedcreative/craft-expandedsearch from Craft 2 to Craft 3.
-Is is an expansion of Crafts search, which gives you a context for search hits.
+This repository is a fork of https://github.com/mustasj-as/expanded-search, which is
+https://github.com/composedcreative/craft-expandedsearch ported from Craft 2 to Craft 3.
+It is an expansion of Crafts search, which gives you a context for search hits.
 
 ![Screenshot](resources/img/plugin-logo.png)
 
@@ -54,7 +55,7 @@ In your search results template
 
 ## Expanded Search from Element API
 
-To use the plugin from ElementAPI. Do a normal search and then for each result, you can fetch the `ExpandedSearchModel` from the service
+To use the plugin from ElementAPI. Do a normal search and then for each result, you can fetch the `ExpandedSearchModel` from the service.
 
 ```
 'transformer' => function(Entry $entry) {

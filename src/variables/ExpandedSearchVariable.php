@@ -31,20 +31,17 @@ class ExpandedSearchVariable
     // Public Methods
     // =========================================================================
 
-    /**
-     * Whatever you want to output to a Twig template can go into a Variable method.
-     * You can have as many variable functions as you want.  From any Twig template,
-     * call it like this:
-     *
-     *     {{ craft.expandedSearch.exampleVariable }}
-     *
-     * Or, if your variable requires parameters from Twig:
-     *
-     *     {{ craft.expandedSearch.exampleVariable(twigValue) }}
-     *
-     * @param null $optional
-     * @return string
-     */
+	/**
+	 * Whatever you want to output to a Twig template can go into a Variable method.
+	 * You can have as many variable functions as you want.  From any Twig template,
+	 * call it like this:
+	 *
+	 *     {{ craft.expandedSearch.search(query) }}
+	 *
+	 * @param string $term
+	 * @param array $settings
+	 * @return array
+	 */
     public function search($term, $settings = [])
     {
         return ExpandedSearch::$plugin->expandedSearchService->search($term, $settings);
