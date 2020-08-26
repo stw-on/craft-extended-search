@@ -8,10 +8,10 @@
  * @copyright Copyright (c) 2019 Mustasj
  */
 
-namespace mustasj\expandedsearch\services;
+namespace stwon\craftcms\extendedsearch\services;
 
 use craft\elements\Asset;
-use mustasj\expandedsearch\models\ExpandedSearchModel;
+use stwon\craftcms\extendedsearch\models\ExtendedSearchModel;
 
 use Craft;
 use craft\base\Component;
@@ -28,10 +28,9 @@ use craft\elements\Entry;
  * https://craftcms.com/docs/plugins/services
  *
  * @author    Mustasj
- * @package   ExpandedSearch
  * @since     0.0.1
  */
-class ExpandedSearchService extends Component
+class ExtendedSearchService extends Component
 {
 	// Public Methods
 	// =========================================================================
@@ -111,11 +110,11 @@ class ExpandedSearchService extends Component
 	 * @param $entry
 	 * @param string $term
 	 * @param int $length
-	 * @return ExpandedSearchModel
+	 * @return ExtendedSearchModel
 	 */
 	public function expandSearchResults($entry, $term, $length = 300)
 	{
-		$result = new ExpandedSearchModel();
+		$result = new ExtendedSearchModel();
 		$result->element = $entry;
 		list ($result->matchedField, $result->matchedValue, $result->relatedValues) = $this->findMatchesInFieldSet($entry, $term, $length);
 		return $result;

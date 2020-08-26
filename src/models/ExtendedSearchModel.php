@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 Mustasj
  */
 
-namespace mustasj\expandedsearch\models;
+namespace stwon\craftcms\extendedsearch\models;
 
 use craft\base\Element;
 use craft\base\Model;
@@ -22,10 +22,9 @@ use craft\base\Model;
  * https://craftcms.com/docs/plugins/models
  *
  * @author    Mustasj
- * @package   ExpandedSearch
  * @since     0.0.1
  */
-class ExpandedSearchModel extends Model
+class ExtendedSearchModel extends Model
 {
 	// Public Properties
 	// =========================================================================

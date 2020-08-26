@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2019 Mustasj
  */
 
-namespace mustasj\expandedsearch\variables;
+namespace stwon\craftcms\extendedsearch\variables;
 
-use mustasj\expandedsearch\ExpandedSearch;
+use stwon\craftcms\extendedsearch\ExtendedSearch;
 
 use Craft;
 
@@ -23,10 +23,9 @@ use Craft;
  * https://craftcms.com/docs/plugins/variables
  *
  * @author    Mustasj
- * @package   ExpandedSearch
  * @since     0.0.1
  */
-class ExpandedSearchVariable
+class ExtendedSearchVariable
 {
     // Public Methods
     // =========================================================================
@@ -44,6 +43,6 @@ class ExpandedSearchVariable
 	 */
     public function search($term, $settings = [])
     {
-        return ExpandedSearch::$plugin->expandedSearchService->search($term, $settings);
+        return ExtendedSearch::$plugin->expandedSearchService->search($term, $settings);
     }
 }

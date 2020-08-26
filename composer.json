@@ -1,6 +1,6 @@
 {
-	"name": "mustasj/expanded-search",
-	"description": "An expansion of Crafts search",
+	"name": "stw-on/craft-extended-search",
+	"description": "Retrieve additional context for Element searches",
 	"type": "craft-plugin",
 	"version": "2.0.0",
 	"keywords": [
@@ -8,14 +8,18 @@
 		"cms",
 		"craftcms",
 		"craft-plugin",
-		"expanded search"
+		"extended search"
 	],
 	"support": {
-		"docs": "https://github.com/mustasj/expanded-search/blob/master/README.md",
-		"issues": "https://github.com/mustasj/expanded-search/issues"
+		"docs": "https://github.com/stwo-n/craft-extended-search/blob/master/README.md",
+		"issues": "https://github.com/stw-on/craft-extended-search/issues"
 	},
 	"license": "MIT",
 	"authors": [
+		{
+			"name": "Timo Schwarzer / Studentenwerk OstNiedersachsen",
+			"homepage": "https://stw-on.de"
+		},,
 		{
 			"name": "Mustasj",
 			"homepage": "https://mustasj.no"
@@ -26,15 +30,15 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"mustasj\\expandedsearch\\": "src/"
+			"stwon\\craftcms\\extendedsearch\\": "src/"
 		}
 	},
 	"extra": {
-		"name": "Expanded Search",
-		"handle": "expanded-search",
+		"name": "Extended Search",
+		"handle": "extended-search",
 		"hasCpSettings": false,
 		"hasCpSection": false,
-		"changelogUrl": "https://raw.githubusercontent.com/mustasj/expanded-search/master/CHANGELOG.md",
+		"changelogUrl": "https://raw.githubusercontent.com/stw-on/expanded-search/master/CHANGELOG.md",
 		"components": {
 			"expandedSearchService": "mustasj\\expandedsearch\\services\\ExpandedSearchService"
 		},

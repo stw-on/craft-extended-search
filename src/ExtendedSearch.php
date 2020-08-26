@@ -8,10 +8,10 @@
  * @copyright Copyright (c) 2019 Mustasj
  */
 
-namespace mustasj\expandedsearch;
+namespace stwon\craftcms\extendedsearch;
 
-use mustasj\expandedsearch\services\ExpandedSearchService as ExpandedSearchServiceService;
-use mustasj\expandedsearch\variables\ExpandedSearchVariable;
+use stwon\craftcms\extendedsearch\services\ExtendedSearchService as ExpandedSearchServiceService;
+use stwon\craftcms\extendedsearch\variables\ExtendedSearchVariable;
 
 use Craft;
 use craft\base\Plugin;
@@ -37,7 +37,7 @@ use yii\base\Event;
  *
  * @property  ExpandedSearchServiceService $expandedSearchService
  */
-class ExpandedSearch extends Plugin
+class ExtendedSearch extends Plugin
 {
 	// Static Properties
 	// =========================================================================
@@ -46,7 +46,7 @@ class ExpandedSearch extends Plugin
 	 * Static property that is an instance of this plugin class so that it can be accessed via
 	 * ExpandedSearch::$plugin
 	 *
-	 * @var ExpandedSearch
+	 * @var ExtendedSearch
 	 */
 	public static $plugin;
 
@@ -86,7 +86,7 @@ class ExpandedSearch extends Plugin
 			function (Event $event) {
 				/** @var CraftVariable $variable */
 				$variable = $event->sender;
-				$variable->set('expandedSearch', ExpandedSearchVariable::class);
+				$variable->set('expandedSearch', ExtendedSearchVariable::class);
 			}
 		);
 
