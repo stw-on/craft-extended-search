@@ -22,7 +22,7 @@ To install the plugin, follow these instructions.
 
 3.  In the Control Panel, go to Settings → Plugins and click the “Install” button for Extended Search.
 
-## Using Expanded Search
+## Using Extended Search
 
 The first parameter is the search term. Which will be salted automatically: `*{term}*`
 The second is settings.
@@ -41,7 +41,7 @@ The second is settings.
 In your search results template
 
 ```twig
-{% set results = craft.expandedSearch.search(query, { sections: ['news'], length: 150 }) %}
+{% set results = craft.extendedSearch.search(query, { sections: ['news'], length: 150 }) %}
 {% for result in results %}
     <strong data-field="{{ result.matchedField }}">{{ result.entry.title }}</strong><br>
     <p>{{result.matchedValue}}</p>

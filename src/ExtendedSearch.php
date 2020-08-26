@@ -1,16 +1,8 @@
 <?php
-/**
- * Expanded Search plugin for Craft CMS 3.x
- *
- * An expansion of Crafts search
- *
- * @link      mustasj.no
- * @copyright Copyright (c) 2019 Mustasj
- */
+
 
 namespace stwon\craftcms\extendedsearch;
 
-use stwon\craftcms\extendedsearch\services\ExtendedSearchService as ExpandedSearchServiceService;
 use stwon\craftcms\extendedsearch\variables\ExtendedSearchVariable;
 
 use Craft;
@@ -21,22 +13,7 @@ use craft\web\twig\variables\CraftVariable;
 
 use yii\base\Event;
 
-/**
- * Craft plugins are very much like little applications in and of themselves. We’ve made
- * it as simple as we can, but the training wheels are off. A little prior knowledge is
- * going to be required to write a plugin.
- *
- * For the purposes of the plugin docs, we’re going to assume that you know PHP and SQL,
- * as well as some semi-advanced concepts like object-oriented programming and PHP namespaces.
- *
- * https://craftcms.com/docs/plugins/introduction
- *
- * @author    Mustasj
- * @package   ExpandedSearch
- * @since     0.0.1
- *
- * @property  ExpandedSearchServiceService $expandedSearchService
- */
+
 class ExtendedSearch extends Plugin
 {
 	// Static Properties
@@ -58,7 +35,7 @@ class ExtendedSearch extends Plugin
 	 *
 	 * @var string
 	 */
-	public $schemaVersion = '0.0.1';
+	public $schemaVersion = '0.0.2';
 
 	// Public Methods
 	// =========================================================================
@@ -86,7 +63,7 @@ class ExtendedSearch extends Plugin
 			function (Event $event) {
 				/** @var CraftVariable $variable */
 				$variable = $event->sender;
-				$variable->set('expandedSearch', ExtendedSearchVariable::class);
+				$variable->set('extendedSearch', ExtendedSearchVariable::class);
 			}
 		);
 
@@ -121,7 +98,7 @@ class ExtendedSearch extends Plugin
 		 */
 		Craft::info(
 			Craft::t(
-				'expanded-search',
+				'extended-search',
 				'{name} plugin loaded',
 				['name' => $this->name]
 			),

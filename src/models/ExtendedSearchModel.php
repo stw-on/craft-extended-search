@@ -1,29 +1,10 @@
 <?php
-/**
- * Expanded Search plugin for Craft CMS 3.x
- *
- * An expansion of Crafts search
- *
- * @link      mustasj.no
- * @copyright Copyright (c) 2019 Mustasj
- */
 
 namespace stwon\craftcms\extendedsearch\models;
 
 use craft\base\Element;
 use craft\base\Model;
 
-/**
- * ExpandedSearchModel Model
- *
- * Models are containers for data. Just about every time information is passed
- * between services, controllers, and templates in Craft, it’s passed via a model.
- *
- * https://craftcms.com/docs/plugins/models
- *
- * @author    Mustasj
- * @since     0.0.1
- */
 class ExtendedSearchModel extends Model
 {
 	// Public Properties

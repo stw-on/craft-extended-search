@@ -1,4 +1,4 @@
-# Expanded Search Changelog
+# Extended Search Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 2.0.0 - 2020-08-26
 ### Added
 - Parameter to specify the element type to search for
+- Renamed to Extended Search
 
 ## 1.2.1 - 2019-04-01
 ### Fixed

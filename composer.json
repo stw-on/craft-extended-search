@@ -11,7 +11,7 @@
 		"extended search"
 	],
 	"support": {
-		"docs": "https://github.com/stwo-n/craft-extended-search/blob/master/README.md",
+		"docs": "https://github.com/stwo-on/craft-extended-search/blob/master/README.md",
 		"issues": "https://github.com/stw-on/craft-extended-search/issues"
 	},
 	"license": "MIT",
@@ -40,8 +40,8 @@
 		"hasCpSection": false,
 		"changelogUrl": "https://raw.githubusercontent.com/stw-on/expanded-search/master/CHANGELOG.md",
 		"components": {
-			"expandedSearchService": "mustasj\\expandedsearch\\services\\ExpandedSearchService"
+			"extendedSearchService": "stwon\\craftcms\\extendedsearch\\services\\ExtendedSearchService"
 		},
-		"class": "mustasj\\expandedsearch\\ExpandedSearch"
+		"class": "stwon\\craftcms\\extendedsearch\\ExtendedSearch"
 	}
 }

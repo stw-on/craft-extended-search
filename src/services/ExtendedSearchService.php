@@ -1,12 +1,5 @@
 <?php
-/**
- * Expanded Search plugin for Craft CMS 3.x
- *
- * An expansion of Crafts search
- *
- * @link      mustasj.no
- * @copyright Copyright (c) 2019 Mustasj
- */
+
 
 namespace stwon\craftcms\extendedsearch\services;
 
@@ -18,18 +11,6 @@ use craft\base\Component;
 use craft\base\Element;
 use craft\elements\Entry;
 
-/**
- * ExpandedSearchService Service
- *
- * All of your plugin’s business logic should go in services, including saving data,
- * retrieving data, etc. They provide APIs that your controllers, template variables,
- * and other plugins can interact with.
- *
- * https://craftcms.com/docs/plugins/services
- *
- * @author    Mustasj
- * @since     0.0.1
- */
 class ExtendedSearchService extends Component
 {
 	// Public Methods
