@@ -38,7 +38,7 @@
 		"handle": "extended-search",
 		"hasCpSettings": false,
 		"hasCpSection": false,
-		"changelogUrl": "https://raw.githubusercontent.com/stw-on/expanded-search/master/CHANGELOG.md",
+		"changelogUrl": "https://raw.githubusercontent.com/stw-on/craft-extended-search/master/CHANGELOG.md",
 		"components": {
 			"extendedSearchService": "stwon\\craftcms\\extendedsearch\\services\\ExtendedSearchService"
 		},
