@@ -144,7 +144,7 @@ class ExtendedSearchService extends Component
 	protected function contextualizeHit($content, $term, $length)
 	{
 		$content = strip_tags($content);
-		$pattern = '/(' . $term . ')/im';
+		$pattern = '/(' . preg_quote($term) . ')/im';
 		$midway = round($length / 2);
 		if (strlen($content) > $length) {
 			// if the hit is after the middle, we need to shorten the text on both sides

@@ -2,7 +2,7 @@
 	"name": "stw-on/craft-extended-search",
 	"description": "Retrieve additional context for Element searches",
 	"type": "craft-plugin",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"keywords": [
 		"craft",
 		"cms",
