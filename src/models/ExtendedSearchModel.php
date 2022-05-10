@@ -13,23 +13,23 @@ class ExtendedSearchModel extends Model
 	/**
 	 * The field that the search query matched against
 	 *
-	 * @var string
+	 * @var string|null
 	 */
-	public string $matchedField;
+	public string|null $matchedField;
 
 	/**
 	 * The value that the search query matched against
 	 *
-	 * @var string
+	 * @var string|null
 	 */
-	public string $matchedValue;
+	public string|null $matchedValue;
 
 	/**
 	 * The field that the search query matched against
 	 *
-	 * @var array
+	 * @var array|null
 	 */
-	public array $relatedValues = [];
+	public array|null $relatedValues = [];
 
 	/**
 	 * The element type

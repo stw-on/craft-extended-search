@@ -177,9 +177,7 @@ class ExtendedSearchService extends Component
 				if (stripos($fieldContents, $term) !== false) {
 					return [$fieldHandle, $this->contextualizeHit($fieldContents, $term, $length), []];
 				}
-			} elseif (is_object($fieldContents) && $fieldContents instanceof \verbb\supertable\elements\db\SuperTableBlockQuery) {
-				//TODO: fix this somehow
-			} elseif (is_object($fieldContents) && $fieldContents instanceof \craft\elements\db\MatrixBlockQuery) {
+			} elseif ($fieldContents instanceof \craft\elements\db\MatrixBlockQuery) {
 				$relatedValues = [];
 				$matchedValue = '';
 				foreach ($fieldContents->all() as $matrixBlock) {
@@ -193,7 +191,7 @@ class ExtendedSearchService extends Component
 				}
 				// TODO: Should we append the matched sub-field handle to the higher-level handle?
 				return [$fieldHandle, $matchedValue, $relatedValues];
-			} elseif (is_object($fieldContents) && $fieldContents instanceof \craft\redactor\FieldData) {
+			} elseif ($fieldContents instanceof \craft\redactor\FieldData) {
 				//dump(stripos($fieldContents->getParsedContent(), $term));
 				if (stripos($fieldContents->getParsedContent(), $term)) {
 					return [$fieldHandle, $this->contextualizeHit($fieldContents->getParsedContent(), $term, $length), []];
