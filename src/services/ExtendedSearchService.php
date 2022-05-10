@@ -22,8 +22,8 @@ class ExtendedSearchService extends Component
 	 * @param string $term
 	 * @return array the search results
 	 */
-	public function search($term, $settings)
-	{
+	public function search($term, $settings): array
+    {
 		$default = [
 			'type' => 'entry',
 			'sections' => null,
@@ -56,7 +56,7 @@ class ExtendedSearchService extends Component
 					'Invalid type "' .
 					$settings->type .
 					'". Must be one of: ' .
-					join(', ', [Entry::refHandle(), Asset::refHandle()])
+					implode(', ', [Entry::refHandle(), Asset::refHandle()])
 				);
 		}
 
@@ -93,11 +93,11 @@ class ExtendedSearchService extends Component
 	 * @param int $length
 	 * @return ExtendedSearchModel
 	 */
-	public function expandSearchResults($entry, $term, $length = 300)
-	{
+	public function expandSearchResults($entry, string $term, int $length = 300): ExtendedSearchModel
+    {
 		$result = new ExtendedSearchModel();
 		$result->element = $entry;
-		list ($result->matchedField, $result->matchedValue, $result->relatedValues) = $this->findMatchesInFieldSet($entry, $term, $length);
+		[$result->matchedField, $result->matchedValue, $result->relatedValues] = $this->findMatchesInFieldSet($entry, $term, $length);
 		return $result;
 	}
 
@@ -107,10 +107,10 @@ class ExtendedSearchService extends Component
 	 * @param Element $element
 	 * @return array
 	 */
-	protected function getFieldSetValues(Element $element)
-	{
+	protected function getFieldSetValues(Element $element): array
+    {
 		$values = [];
-		foreach ($element->getFieldLayout()->getFields() as $fieldLayoutField) {
+		foreach ($element->getFieldLayout()->getCustomFields() as $fieldLayoutField) {
 			$fieldHandle = Craft::$app->getFields()->getFieldById($fieldLayoutField->id)->handle;
 			$fieldContents = $element->getFieldValue($fieldHandle);
 			$values[$fieldHandle] = $fieldContents;

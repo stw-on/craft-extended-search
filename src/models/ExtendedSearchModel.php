@@ -15,35 +15,35 @@ class ExtendedSearchModel extends Model
 	 *
 	 * @var string
 	 */
-	public $matchedField;
+	public string $matchedField;
 
 	/**
 	 * The value that the search query matched against
 	 *
 	 * @var string
 	 */
-	public $matchedValue;
+	public string $matchedValue;
 
 	/**
 	 * The field that the search query matched against
 	 *
 	 * @var array
 	 */
-	public $relatedValues = [];
+	public array $relatedValues = [];
 
 	/**
 	 * The element type
 	 *
 	 * @var string
 	 */
-	public $type;
+	public string $type;
 
 	/**
 	 * The matched entry
 	 *
 	 * @var Element
 	 */
-	public $element;
+	public Element $element;
 
 	// Public Methods
 	// =========================================================================
@@ -58,7 +58,7 @@ class ExtendedSearchModel extends Model
 	 *
 	 * @return array
 	 */
-	public function rules()
+	public function rules(): array
 	{
 		return [
 			['matchedField', 'string'],

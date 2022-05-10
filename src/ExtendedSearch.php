@@ -35,7 +35,7 @@ class ExtendedSearch extends Plugin
 	 *
 	 * @var string
 	 */
-	public $schemaVersion = '0.0.2';
+	public string $schemaVersion = '0.0.2';
 
 	// Public Methods
 	// =========================================================================
